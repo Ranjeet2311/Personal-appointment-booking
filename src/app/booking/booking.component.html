@@ -1,0 +1,20 @@
+<app-banner direction="" btnText="See All" bannerText='Create new appointment'></app-banner>
+<div class="row">
+  <div class="col-12 col-md-8 me-auto ms-auto">
+    <form (ngSubmit)=" addAppointments()">
+      <div class="form-group">
+        <label for="details">Enter Topic</label>
+        <input type="text" class="form-control mt-2" id="details" aria-describedby="detailsHelp" placeholder="Enter details" [(ngModel)]="appointmentTitle"
+          [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group mt-4 mb-4">
+        <label for="date">Select date</label>
+        <input type="date" class="form-control mt-2" id="date" placeholder="date" [(ngModel)]="appointmentDate" [ngModelOptions]="{standalone: true}">
+      </div>
+      <button type="submit" class="btn btn-primary route-btn w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Appointment</button>
+      <app-error-box>
+        {{message}}
+      </app-error-box>
+    </form>
+  </div>
+</div>

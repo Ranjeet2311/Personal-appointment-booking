@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.route-btn {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 22px;
+  line-height: 32px;
+  // border: 1px solid white;
+  background: #667db6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #667db6, #0082c8);
+  background: linear-gradient(to right, #667db6, #0082c8);
+}
+
+.banner {
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 6px !important;
+  color: white;
+  text-decoration: underline;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 4px 12px black;
+  }
+
+  .content {
+    padding: 2px 30px;
+  }
+  .delete-icon {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+form {
+  background-color: white;
+  padding: 40px;
+}

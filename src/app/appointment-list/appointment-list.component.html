@@ -1,0 +1,15 @@
+<app-banner direction="/add-appointment" btnText="Add new" bannerText='All appointments'></app-banner>
+<div class="row mt-4">
+  <p *ngIf="appointmentService.appointments.length ===0" class="text-center text-light">No appointments to show</p>
+  <div *ngIf="appointmentService.appointments" class="col-12 col-md-8 me-auto ms-auto pe-0">
+    <section class="list-group" *ngFor="let appointment of appointmentService.appointments; index as i">
+      <div class="list-group-item mb-2">
+        <div class="content">
+          <h4>{{appointment.title }}</h4>
+          <h5> {{appointment.date | date:'fullDate' }}</h5>
+        </div>
+        <i class="bi bi-x-circle-fill delete-icon" (click)="deleteAppointment(i)"></i>
+      </div>
+    </section>
+  </div>
+</div>
