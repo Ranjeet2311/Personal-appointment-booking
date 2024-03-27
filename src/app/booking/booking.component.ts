@@ -16,7 +16,7 @@ export class BookingComponent {
 
   addAppointments() {
     if (this.appointmentTitle.trim().length > 0 && this.appointmentDate) {
-      this.message = 'Successfully Added task';
+      this.message = 'Task Adding Successful 👌';
 
       let newAppointment: Appointment = {
         id: Math.floor(Math.random() * 100000),
@@ -31,7 +31,7 @@ export class BookingComponent {
       (this.appointmentTitle = ''), (this.appointmentDate = new Date());
     } else {
       this.message =
-        'Please fill all the required details and then click the add button';
+        '🚫 Please fill all the required details and then click the add button';
     }
   }
 }
